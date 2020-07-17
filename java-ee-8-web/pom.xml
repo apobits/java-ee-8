@@ -24,17 +24,17 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.2.2</version>
                 <configuration>
-                    <webappDirectory>web</webappDirectory>
+                    <webXml>web/WEB-INF/web.xml</webXml>
+                    <warSourceDirectory>web</warSourceDirectory>
                     <webResources>
                         <resource>
-                            <directory>META-INF</directory>
+                            <directory>src/main/META-INF</directory>
                             <targetPath>WEB-INF/classes/META-INF</targetPath>
                             <includes>
                                 <include>**.xml</include>
                             </includes>
                         </resource>
                     </webResources>
-                    <goal>war:exploded</goal>
                 </configuration>
             </plugin>
         </plugins>
