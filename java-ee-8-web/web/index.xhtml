@@ -15,11 +15,17 @@
         <h:inputText id="mailInput" label="mail" value="#{helloBean.mail}" required="true" p:placeholder="Name">
             <f:ajax event="keyup" render="mailOutput"/>
         </h:inputText>
-        <h:outputText id ="mailOutput" value="#{helloBean.mail}"/>
+        <h:outputText id="mailOutput" value="#{helloBean.mail}"/>
         <h:panelGrid columns="1">
             <h:graphicImage library="images" name="MyWonderWoman.jpg" alt="Not found"/>
             <h:commandButton value="Lottery" actionListener="#{helloBean.process}">
                 <f:ajax render="messages"/>
+            </h:commandButton>
+            <h:commandButton action="#{timerBean.startTimer}" value="start timer">
+                <f:ajax/>
+            </h:commandButton>
+            <h:commandButton action="#{timerBean.stopTimer}" value="stop timer">
+                <f:ajax/>
             </h:commandButton>
         </h:panelGrid>
     </h:form>
