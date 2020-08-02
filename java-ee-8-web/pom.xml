@@ -27,10 +27,7 @@
                     <webXml>web/WEB-INF/web.xml</webXml>
                     <warSourceDirectory>web</warSourceDirectory>
                     <webResources>
-                        <resource>
-                            <directory>src/main/resources</directory>
-                        </resource>
-                        <resource>
+                           <resource>
                             <directory>src/main/META-INF</directory>
                             <targetPath>WEB-INF/classes/META-INF</targetPath>
                             <includes>

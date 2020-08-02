@@ -5,7 +5,6 @@ import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-import java.awt.event.ActionEvent;
 import java.io.Serializable;
 
 @ViewScoped
@@ -19,18 +18,18 @@ public class HelloBean implements Serializable {
     private String mail;
 
     public String getMail() {
-	return mail;
+        return mail;
     }
 
     public void setMail(String mail) {
-	this.mail = mail;
+        this.mail = mail;
     }
 
     public String getName() {
-	return name;
+        return name;
     }
 
     public void process() {
-	facesContext.addMessage(null, new FacesMessage("Hello there"));
+        facesContext.addMessage(null, new FacesMessage("Hello there"));
     }
 }

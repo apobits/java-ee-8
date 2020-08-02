@@ -19,7 +19,7 @@ import java.util.Scanner;
 @Stateless
 public class ResultSL {
 
-    @PersistenceContext(unitName = "apo_lotteries")
+    @PersistenceContext(unitName = "apo_lottery")
     private EntityManager entityManager;
 
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)

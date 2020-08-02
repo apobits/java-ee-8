@@ -7,7 +7,7 @@ import javax.persistence.PersistenceContext;
 @Stateless
 public class CRUDSL<T> {
 
-    @PersistenceContext(unitName = "apo_lotteries")
+    @PersistenceContext(unitName = "apo_lottery")
     private EntityManager entityManager;
 
     public T save(T t) {
