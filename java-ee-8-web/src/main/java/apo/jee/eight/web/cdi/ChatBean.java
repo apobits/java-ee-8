@@ -15,22 +15,37 @@ public class ChatBean implements Serializable {
     private String message;
 
     public void sendMessage() {
-	messageSenderBean.send(String.format("%s: %s", name, message));
+        messageSenderBean.send(String.format("%s: %s", name, message));
     }
 
     public String getName() {
-	return name;
+        return name;
     }
 
     public void setName(String name) {
-	this.name = name;
+        this.name = name;
     }
 
     public String getMessage() {
-	return message;
+        return message;
     }
 
     public void setMessage(String message) {
-	this.message = message;
+        this.message = message;
+    }
+
+    public static void main(String[] args) {
+        String description = "text to > convert into& what we want";
+
+        String systemParameter = "&=,>=_";
+
+        String[] values = systemParameter.split(",");
+
+        for (String value : values) {
+            String temp[] = value.split("");
+            String toReplace = temp.length == 3 ? temp[2] : "";
+            description = description.replaceAll(temp[0], toReplace);
+        }
+        System.out.println(description);
     }
 }
